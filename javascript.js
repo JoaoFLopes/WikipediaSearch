@@ -17,14 +17,22 @@ $(document).ready(function(){
                $("#output").html('');
 
                for(var i = data[1].length - 1; i >= 0; i--){
-                   $("#output").prepend("<li><a href=" + data[3][i] + " target='_blank'>" + data[1][i] + "</a><p>" + data[2][i] + "</p></li>");
+                   $("#output").prepend("<div class='panel-heading'><a href=" + data[3][i] + " target='_blank'>" + data[1][i] + "</a></div><div class='panel-body'<p>" + data[2][i] + "</p></div>");
                }
            },
            error: function(error){
                alert("Error");
            }
 
-       })
-   })
+       });
+
+
+   });
+
+    $("#searchBox").keypress(function(key){
+        if(key.which == 13){
+            searchButton.click();
+        }
+    });
 
 });
