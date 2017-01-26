@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    //added only to test the ssh key
+
    $("#searchButton").click(function(){
 
        var searchItem = $("#searchBox").val();
